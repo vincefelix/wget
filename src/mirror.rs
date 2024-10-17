@@ -85,11 +85,8 @@ pub async fn mirror_website(
                     if let Some(folder) = extract_parent_directory(link) {
                         println!("{link}");
                         let folder_path = format!("/{}", folder);
-                        // println!("--------------folder--------{}--------------", folder);
-                        // println!(" exclude directory{:?}",exclude_dirs);
                         if exclude_dirs_set.contains(folder_path.as_str()) {
-                            // println!("-----------folder_path-------{}-------------- ", folder_path);
-                            // println!("Skipping folder: {} due to exclusion rules.", folder);
+                            
                             continue;
                         }
                     }
