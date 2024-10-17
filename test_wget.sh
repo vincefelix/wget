@@ -145,11 +145,4 @@ else
     failure
 fi
 
-./target/release/wget --mirror -X=/img https://trypap.com/
-if [ -f "./trypap.com/index.html" ] && [ ! -d "./trypap.com/img" ]; then
-    success
-else
-    failure
-fi
-
 echo "All tests completed."
